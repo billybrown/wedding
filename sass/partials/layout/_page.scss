@@ -1,0 +1,12 @@
+html {
+	background: $footer-color;
+}
+
+body {
+	min-width: $min-width;
+	background: $background-color;
+}
+
+.constrained {
+	@include constrained;
+}
