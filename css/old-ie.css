@@ -633,58 +633,33 @@ textarea {
 }
 
 /* line 11, ../sass/partials/patterns/_colors.scss */
-.color--red {
-  background: #d7272b;
+.color--green {
+  background: #2ddb48;
 }
 
 /* line 14, ../sass/partials/patterns/_colors.scss */
-.type--red {
-  color: #d7272b;
+.type--green {
+  color: #2ddb48;
 }
 
 /* line 17, ../sass/partials/patterns/_colors.scss */
-.border--red {
-  border: 1px solid #d7272b;
+.border--green {
+  border: 1px solid #2ddb48;
 }
 
 /* line 21, ../sass/partials/patterns/_colors.scss */
-.button.red, input.red[type="submit"] {
-  background: #d7272b;
+.button.green, input.green[type="submit"] {
+  background: #2ddb48;
   color: white;
 }
 /* line 25, ../sass/partials/patterns/_colors.scss */
-.button.red:hover, input.red[type="submit"]:hover {
-  background: #e05155;
-}
-
-/* line 11, ../sass/partials/patterns/_colors.scss */
-.color--blue {
-  background: #24407a;
-}
-
-/* line 14, ../sass/partials/patterns/_colors.scss */
-.type--blue {
-  color: #24407a;
-}
-
-/* line 17, ../sass/partials/patterns/_colors.scss */
-.border--blue {
-  border: 1px solid #24407a;
-}
-
-/* line 21, ../sass/partials/patterns/_colors.scss */
-.button.blue, input.blue[type="submit"] {
-  background: #24407a;
-  color: white;
-}
-/* line 25, ../sass/partials/patterns/_colors.scss */
-.button.blue:hover, input.blue[type="submit"]:hover {
-  background: #3055a1;
+.button.green:hover, input.green[type="submit"]:hover {
+  background: #59e26e;
 }
 
 /* line 1, ../sass/partials/patterns/_type.scss */
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "proxima-nova", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   color: #333333;
 }
 
@@ -702,12 +677,12 @@ p {
 /* line 21, ../sass/partials/patterns/_type.scss */
 a, .link {
   text-decoration: none;
-  color: #d7272b;
+  color: #2ddb48;
 }
 /* line 25, ../sass/partials/patterns/_type.scss */
 a:hover, .link:hover {
   text-decoration: none;
-  color: #e05155;
+  color: #59e26e;
 }
 
 /* line 37, ../sass/partials/patterns/_type.scss */
@@ -730,7 +705,7 @@ a:hover, .link:hover {
 
 /* line 70, ../sass/partials/patterns/_type.scss */
 blockquote {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-size: 1.75em;
   line-height: 1.35em;
   border-left: 1px solid #eeeeee;
@@ -782,7 +757,7 @@ hr {
   font-weight: 400;
   line-height: 1em;
   margin: 0 0 .5em;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 /* line 129, ../sass/partials/patterns/_type.scss */
 .header.big, h2.big {
@@ -795,7 +770,7 @@ hr {
 
 /* line 142, ../sass/partials/patterns/_type.scss */
 h3, h4, h5 {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   margin: 0 0 1em;
   line-height: 1.35em;
 }
@@ -804,19 +779,20 @@ h3, h4, h5 {
 h1 {
   font-size: 2.5em;
   line-height: 1.1em;
+  color: #2ddb48;
 }
 
 /* line 3, ../sass/partials/patterns/_buttons.scss */
 .button, a.button, input[type="submit"] {
   font-weight: 400;
   border: none;
-  background: #d7272b;
+  background: #2ddb48;
   color: white;
   padding: 6.5px 14px;
 }
 /* line 10, ../sass/partials/patterns/_buttons.scss */
 .button:hover, input[type="submit"]:hover {
-  background: #e05155;
+  background: #59e26e;
 }
 /* line 14, ../sass/partials/patterns/_buttons.scss */
 .button.full, input.full[type="submit"] {
@@ -895,7 +871,7 @@ h1 {
   display: inline-block;
   margin-right: 6px;
   padding-right: 10px;
-  border-right: 1px solid #d7272b;
+  border-right: 1px solid #eeeeee;
 }
 /* line 48, ../sass/partials/patterns/_lists.scss */
 .list--inline-border li.last-item {
@@ -1023,7 +999,7 @@ label {
 }
 /* line 56, ../sass/partials/patterns/_inputs.scss */
 .error label {
-  color: #d7272b;
+  color: #2ddb48;
 }
 
 /* line 62, ../sass/partials/patterns/_inputs.scss */
@@ -1107,11 +1083,11 @@ td {
 /* line 14, ../sass/partials/patterns/_accordian.scss */
 .accordian-title {
   cursor: pointer;
-  color: #d7272b;
+  color: #2ddb48;
 }
 /* line 18, ../sass/partials/patterns/_accordian.scss */
 .accordian-title:hover {
-  color: #e05155;
+  color: #59e26e;
 }
 
 /* line 3, ../sass/partials/patterns/_tabs.scss */
@@ -1137,7 +1113,7 @@ td {
 }
 /* line 21, ../sass/partials/patterns/_tabs.scss */
 .tabs--nav li:hover {
-  background: #d7272b;
+  background: #2ddb48;
   color: white;
 }
 /* line 25, ../sass/partials/patterns/_tabs.scss */
@@ -1197,4 +1173,21 @@ body {
   max-width: 55em;
   margin-right: auto;
   margin-left: auto;
+}
+
+/* line 4, ../sass/partials/layout/_page--front.scss */
+.main--header {
+  padding: 1em;
+  text-align: center;
+}
+
+/* line 9, ../sass/partials/layout/_page--front.scss */
+.main--main {
+  text-align: center;
+  padding: 1em;
+}
+
+/* line 14, ../sass/partials/layout/_page--front.scss */
+.section--photo {
+  margin-bottom: 1em;
 }

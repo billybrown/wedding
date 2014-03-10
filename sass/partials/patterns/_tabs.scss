@@ -8,14 +8,14 @@
 	li {
 		font-size: 1em;
 		margin: 0 .25em 0 0;
-		background: $web-grey-dark;
+		background: $grey-dark;
 		padding: .6em .6em .4em;
 		color: white;
 		display: block;
 		float: left;
-		border-top: 1px solid $web-grey-dark;
-		border-left: 1px solid $web-grey-dark;
-		border-right: 1px solid $web-grey-dark;
+		border-top: 1px solid $grey-dark;
+		border-left: 1px solid $grey-dark;
+		border-right: 1px solid $grey-dark;
 		cursor: pointer;
 
 		&:hover {
@@ -24,7 +24,7 @@
 		}
 		&.active {
 		background: white;
-		color: $web-black;
+		color: $black;
 		}
 	}
 
@@ -37,7 +37,7 @@
 }
 
 .tabs--content {
-	border: 1px solid $web-grey-dark;
+	border: 1px solid $grey-dark;
 	padding: 1em;
 	.no-js & {
 		border: none;
@@ -51,7 +51,7 @@
 
 	.no-js & {
 		display: block;
-		border: 1px solid $web-grey-dark;
+		border: 1px solid $grey-dark;
 		padding: 1em;
 		margin-bottom: 1em;
 	}

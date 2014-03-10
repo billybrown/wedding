@@ -29,9 +29,8 @@
 	}
 }
 
-@include colorize(white, $web-white, $web-black);
-@include colorize(black, $web-black, white);
-@include colorize(grey, $web-grey, white);
-@include colorize(red, $red, white);
-@include colorize(blue, $blue, white);
+@include colorize(white, $white, $black);
+@include colorize(black, $black, white);
+@include colorize(grey, $grey, white);
+@include colorize(green, $green, white);
 

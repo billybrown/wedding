@@ -9,10 +9,10 @@
 //+++++++++++++++++++++++++++!!!+++++++++++++++++++++++++++//
 
 $courier:           	"Courier New", "DejaVu Sans Mono", monospace, sans-serif; 
-$helvetica:         	"Helvetica Neue", Helvetica, Arial, sans-serif;
+$helvetica:         	"HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+$proxima: 				"proxima-nova", $helvetica;
 
-
-$base-font-family:		$helvetica;
+$base-font-family:		$proxima, $helvetica;
 $font-headers:			$helvetica;
 $font-monospace:		$courier;
 
@@ -20,24 +20,24 @@ $font-monospace:		$courier;
 //+++++++++++++++++++++++++++!!!+++++++++++++++++++++++++++//
 
 // brand colors
-$red:  					#d7272b;
+$green:  				#2ddb48;
 $blue:	 				#24407a;
 
 
 // standard colors 
-$web-black:				#333333;
-$web-white:    			#ffffff;
-$web-grey:     			#eeeeee;
-$web-grey-dark:			#cccccc;
+$black:				#333333;
+$white:    			#ffffff;
+$grey:     			#eeeeee;
+$grey-dark:			#cccccc;
 
 // standard uses
-$text-color:           	$web-black;
-$background-color: 	   	$web-white;
-$footer-color:			$web-white;
+$text-color:           	$black;
+$background-color: 	   	$white;
+$footer-color:			$white;
 
 // links
-$link-color:      		$red;
-$link-color-hover:		lighten($red, 10%);
+$link-color:      		$green;
+$link-color-hover:		lighten($green, 10%);
 
 // alerts, warnings, etc.
 $alert-danger:    		#a94442;
