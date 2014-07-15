@@ -1,0 +1,48 @@
+//_section img
+
+.section--photo {
+	position: relative;
+	height: 100%;
+	width: 100%;
+	padding: 30px;
+
+	@include breakpoint($bp-medium) {
+		width: 50%;
+		float: right;
+	}
+
+	@include breakpoint($bp-large) {
+		padding: 100px 100px 100px;
+	}
+}
+
+.wedding-photo {
+	background: transparent url('../img/single/jb.jpg') no-repeat top center;
+	position: relative;
+	height: 100%;
+	width: 100%;
+	border: 5px solid $gold;
+	z-index: 2;
+	min-height: 400px;
+	max-width: 540px;
+	margin: 0 auto;
+	background-size: cover;
+
+	@include breakpoint($bp-medium) {
+		min-height: 600px;
+		max-width: 900px;
+	}
+
+}
+
+.word--bill {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+}
+
+.word--jessie {
+	position: absolute;
+	top: 40px;
+	left: 20px;
+}

@@ -1,0 +1,63 @@
+//+++++++++++++++++++++++++++!!!+++++++++++++++++++++++++++
+// BREAKPOINTS (media query stuff)
+
+// EXAMPLE USECASE
+//  .random-class {
+//     font-size: 1em;
+//     @include break-medium {
+//		  font-size: 2em;	
+//	   }
+//  }
+
+// more info about this method here: http://jakearchibald.github.io/sass-ie/
+///==================================================================================
+
+
+$fix-mqs: false !default;
+
+@mixin breakpoint($width, $width-max:"") {
+  // If were outputting for a fixed media query set...
+  @if $fix-mqs {
+    // ...and if we should apply these rules...
+    @if $fix-mqs >= $width {
+      // ...output the content the user gave us.
+      @content;
+    }
+  }
+  @else {
+    // Otherwise, output it using a regular media query
+    @if $width-max != "" {
+        @media screen and (min-width: $width) and (max-width: $width-max) {
+        @content;
+      }
+    }
+    @else {
+      @media screen and (min-width: $width) {
+        @content;
+     }
+    }
+  }
+}
+
+@mixin breakpoint-height($height, $height-max:"") {
+    // Otherwise, output it using a regular media query
+    @if $height-max != "" {
+        @media screen and (min-height: $height) and (max-height: $height-max) {
+        @content;
+      }
+    }
+    @else {
+      @media screen and (min-height: $height) {
+        @content;
+     }
+    }
+}
+
+// I also have a respond-max mixin, that does what you might expect
+$old-ie: false !default;
+@mixin old-ie {
+  // Only use this content if we're dealing with old IE
+  @if $old-ie {
+    @content;
+  }
+}
