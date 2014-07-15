@@ -483,12 +483,10 @@ ul {
     position: relative;
     min-height: 600px;
     z-index: 2; }
-    @media screen and (min-width: 66em) {
-      .section--intro h1 {
-        background-position: 60% 45%; } }
     @media screen and (min-width: 75em) {
       .section--intro h1 {
-        background-size: 600px 614px; } }
+        background-size: 600px 614px;
+        left: 50px; } }
 
 .patterns-1 {
   position: absolute;
