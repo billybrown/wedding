@@ -1,0 +1,103 @@
+// year section
+
+.section--years {
+	@include clearfix;
+	border: 5px solid $gold;
+
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		border: 1px solid $white;
+
+		li {
+			float: left;
+			width: 100%;
+			height: 300px;
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center center;
+			border: 1px solid $white;
+
+			@include breakpoint($bp-teen) {
+				width: 50%;
+			}
+
+			@include breakpoint($bp-medium) {
+				width: 33.333%;
+			}
+
+			&.year--2004 {
+				background-position: top center;
+
+				@include breakpoint($bp-teen) {
+					background-position: center center;
+				}
+			}
+		}
+	}
+
+	.intro {
+		border: 9px solid $white;
+		background: $gold;
+		color: $white;
+		display: table;
+		text-align: center;
+		background: -webkit-linear-gradient(top, $gold, $red);
+
+		h3 {
+			display: table-cell;
+			vertical-align: middle;
+			font-size: 40px;
+			position: relative;
+			z-index: 10;
+
+			span {
+				font-size: 20px;
+				font-family: $droid;
+				text-transform: uppercase;
+				font-weight: 600;
+				position: relative;
+				bottom: 8px;
+				border-bottom: 3px solid $white;
+			}
+
+			&:before {
+				content: '';
+				width: 60px;
+				height: 60px;
+				background: $red;
+				position: absolute;
+				border-radius: 30px;
+				z-index: -1;
+				margin-top: -22px;
+				margin-left: -15px;
+			}
+		}
+	}
+}
+
+.text--year {
+	float: right;
+	display: inline-block;
+	@extend .text--tag;
+	color: $white;
+	font-size: 14px;
+	padding: 10px;
+	background: rgba(0,0,0,.5);
+	border-radius: 2px;
+	margin: 10px 10px;
+
+}
+
+$years: 2004;
+@while $years <= 2014 {
+	.year--#{$years} {
+		background-image: url('../img/single/#{$years}.jpg');
+	}
+
+	$years:$years+1;
+}
+
+
+
