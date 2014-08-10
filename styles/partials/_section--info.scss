@@ -85,17 +85,42 @@
 
 .section-parking {
 	padding: 10px;
+	overflow: hidden;
+	padding-top: 30px;
+	position: relative;
 
 	@include breakpoint($bp-medium) {
 		padding: 40px;
 		border-top: 5px solid $green;
 	}
 	@include breakpoint($bp-large) {
-		padding:  80px;	
+		padding:  60px 70px;	
 	}
 
 	a {
 		font-weight: 900;
 		color: $white;
 	}
+
+	.parking--inside {
+		z-index: 2;
+		position: relative;
+	}
+}
+
+.patterns-4 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -500px;
+    bottom: 0;
+	background: transparent url("../img/svg/pattern-white.svg") repeat 0% 0%;
+    z-index: 1;
+    opacity: .2;
+    
+    -webkit-animation-name: slide;
+	-webkit-animation-duration: 60s;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-iteration-count: infinite;
+
 }
