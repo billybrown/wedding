@@ -9,10 +9,8 @@
 	@include breakpoint($bp-medium) {
 		width: 50%;
 		float: right;
-	}
-
-	@include breakpoint($bp-large) {
-		padding: 100px 100px 100px;
+		padding: 0;
+		position: relative;
 	}
 }
 
@@ -24,25 +22,22 @@
 	border: 5px solid $gold;
 	z-index: 2;
 	min-height: 400px;
-	max-width: 540px;
-	margin: 0 auto;
+	max-width: 500px;
 	background-size: cover;
+	margin: 0 auto;
 
-	@include breakpoint($bp-medium) {
-		min-height: 600px;
-		max-width: 900px;
+	@include breakpoint($bp-teen) {
+		min-height: 500px;
 	}
 
-}
+	@include breakpoint($bp-medium) {
+		height: 600px;
+		width: 450px;
+		left: 50%;
+		top: 50%;
+		position: absolute;
+		margin-left: -(450px * .5);
+		margin-top: -(600px * .5);
+	}
 
-.word--bill {
-	position: absolute;
-	top: 20px;
-	left: 20px;
-}
-
-.word--jessie {
-	position: absolute;
-	top: 40px;
-	left: 20px;
 }

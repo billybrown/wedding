@@ -476,13 +476,16 @@ ul {
       width: 50%; } }
   .section--intro h1 {
     background: transparent url("../img/single/jb-married.png") no-repeat center center;
-    background-size: 400px 410px;
+    background-size: 300px 310px;
     display: block;
     height: 100%;
     width: 100%;
     position: relative;
     min-height: 600px;
     z-index: 2; }
+    @media screen and (min-width: 43em) {
+      .section--intro h1 {
+        background-size: 400px 410px; } }
     @media screen and (min-width: 75em) {
       .section--intro h1 {
         background-size: 600px 614px;
@@ -516,6 +519,20 @@ ul {
   -webkit-animation-timing-function: linear;
   -webkit-animation-iteration-count: infinite; }
 
+.directions-box {
+  position: absolute;
+  z-index: 1000;
+  bottom: 0;
+  left: 0;
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 12px;
+  letter-spacing: 2px;
+  color: #ff7c5e;
+  font-weight: 900;
+  text-align: center;
+  width: 100%; }
+
 .section--photo {
   position: relative;
   height: 100%;
@@ -524,10 +541,9 @@ ul {
   @media screen and (min-width: 66em) {
     .section--photo {
       width: 50%;
-      float: right; } }
-  @media screen and (min-width: 75em) {
-    .section--photo {
-      padding: 100px 100px 100px; } }
+      float: right;
+      padding: 0;
+      position: relative; } }
 
 .wedding-photo {
   background: transparent url('../img/single/jb.jpg') no-repeat top center;
@@ -537,23 +553,21 @@ ul {
   border: 5px solid #eee19a;
   z-index: 2;
   min-height: 400px;
-  max-width: 540px;
-  margin: 0 auto;
-  background-size: cover; }
+  max-width: 500px;
+  background-size: cover;
+  margin: 0 auto; }
+  @media screen and (min-width: 43em) {
+    .wedding-photo {
+      min-height: 500px; } }
   @media screen and (min-width: 66em) {
     .wedding-photo {
-      min-height: 600px;
-      max-width: 900px; } }
-
-.word--bill {
-  position: absolute;
-  top: 20px;
-  left: 20px; }
-
-.word--jessie {
-  position: absolute;
-  top: 40px;
-  left: 20px; }
+      height: 600px;
+      width: 450px;
+      left: 50%;
+      top: 50%;
+      position: absolute;
+      margin-left: -225px;
+      margin-top: -300px; } }
 
 .section--message, .section--message2 {
   padding: 30px;
@@ -578,18 +592,21 @@ ul {
   color: #ffffff;
   border-right: 10px solid #f5edc6;
   border-left: 10px solid #f5edc6; }
-  @media screen and (min-width: 43em) {
-    .section--message p {
-      padding-left: 150px; } }
-  .section--message p:before {
-    content: '';
-    position: absolute;
-    top: -12px;
-    left: 0;
-    display: none; }
+  .section--message p {
+    max-width: 1300px;
+    margin: 0 auto; }
     @media screen and (min-width: 43em) {
-      .section--message p:before {
-        display: block; } }
+      .section--message p {
+        padding-left: 150px; } }
+    .section--message p:before {
+      content: '';
+      position: absolute;
+      top: -12px;
+      left: 0;
+      display: none; }
+      @media screen and (min-width: 43em) {
+        .section--message p:before {
+          display: block; } }
 
 @-webkit-keyframes rainbow {
   0% {
@@ -611,6 +628,7 @@ ul {
     position: absolute;
     width: 350%;
     height: 100%;
+    background: skyblue;
     background: -webkit-linear-gradient(left, #aaffd4, #87ceeb, #aaffd4, #87ceeb, #aaffd4);
     top: 0;
     left: 0;
@@ -619,6 +637,9 @@ ul {
     -webkit-animation-name: rainbow;
     -webkit-animation-iteration-count: infinite;
     -webkit-animation-timing-function: linear; }
+  .section--message2 .inside {
+    max-width: 1300px;
+    margin: 0 auto; }
 
 .list--contact {
   list-style: none;
@@ -675,9 +696,11 @@ ul {
   border-top: none; }
   @media screen and (min-width: 66em) {
     .section--locations {
-      display: table;
-      vertical-align: middle;
       height: 100%; } }
+  @media screen and (min-width: 75em) {
+    .section--locations {
+      display: table;
+      vertical-align: middle; } }
 
 .info--wedding, .info--reception {
   position: relative;
@@ -692,8 +715,12 @@ ul {
   @media screen and (min-width: 66em) {
     .info--wedding, .info--reception {
       width: 50%;
+      float: left; } }
+  @media screen and (min-width: 75em) {
+    .info--wedding, .info--reception {
       display: table-cell;
-      vertical-align: middle; } }
+      vertical-align: middle;
+      float: none; } }
   .info--wedding .image, .info--reception .image {
     background-repeat: no-repeat;
     background-position: center bottom;
@@ -718,7 +745,7 @@ ul {
   position: relative;
   left: 50%;
   margin-left: -200px; }
-  @media screen and (min-width: 75em) {
+  @media screen and (min-width: 78em) {
     .info--wedding .image {
       width: 600px;
       height: 521px;
@@ -736,11 +763,15 @@ ul {
   position: relative;
   left: 50%;
   margin-left: -231px; }
-  @media screen and (min-width: 75em) {
+  @media screen and (min-width: 66em) {
+    .info--reception .image {
+      margin-top: 40px; } }
+  @media screen and (min-width: 78em) {
     .info--reception .image {
       width: 600px;
       height: 521px;
-      margin-left: -300px; } }
+      margin-left: -300px;
+      margin-top: 10px; } }
   @media screen and (min-width: 97em) {
     .info--reception .image {
       width: 748px;
@@ -751,13 +782,14 @@ ul {
 .text--tag, .text--address, .text--time, .text--attire, .text--info, .text--year, .section--rec h4 {
   text-transform: uppercase;
   font-size: 12px;
-  line-height: 12px;
+  line-height: 16px;
   letter-spacing: 2px;
   color: #eee19a;
   font-weight: 900; }
 
 .text--title {
-  color: #eee19a; }
+  color: #eee19a;
+  margin-bottom: 10px; }
 
 .text--address, .text--time, .text--attire, .text--info {
   color: #aaaaaa; }
@@ -776,6 +808,12 @@ ul {
   @media screen and (min-width: 43em) {
     .text--info {
       width: 300px; } }
+
+.text--time span {
+  text-transform: none;
+  letter-spacing: normal;
+  font-style: italic;
+  font-weight: 300; }
 
 .text--info--block {
   padding: 20px;
@@ -812,7 +850,8 @@ ul {
 
 .section--years {
   zoom: 1;
-  border: 5px solid #eee19a; }
+  border: 5px solid #eee19a;
+  background: #eee19a; }
   .section--years:before, .section--years:after {
     content: "\0020";
     display: block;
@@ -824,7 +863,17 @@ ul {
     list-style: none;
     margin: 0;
     padding: 0;
-    border: 1px solid #ffffff; }
+    border: 1px solid #ffffff;
+    max-width: 2000px;
+    margin: 0 auto;
+    zoom: 1; }
+    .section--years ul:before, .section--years ul:after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      overflow: hidden; }
+    .section--years ul:after {
+      clear: both; }
     .section--years ul li {
       float: left;
       width: 100%;
@@ -839,6 +888,9 @@ ul {
       @media screen and (min-width: 66em) {
         .section--years ul li {
           width: 33.333%; } }
+      @media screen and (min-width: 105em) {
+        .section--years ul li {
+          height: 400px; } }
       .section--years ul li.year--2004 {
         background-position: top center; }
         @media screen and (min-width: 43em) {
@@ -873,8 +925,8 @@ ul {
         position: absolute;
         border-radius: 30px;
         z-index: -1;
-        margin-top: -22px;
-        margin-left: -15px; }
+        margin-top: -24px;
+        margin-left: -13px; }
 
 .text--year {
   float: right;
@@ -919,19 +971,26 @@ ul {
 .year--2014 {
   background-image: url('../img/single/2014.jpg'); }
 
-.group-4 {
-  height: auto; }
+.group-info {
+  zoom: 1; }
+  .group-info:before, .group-info:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden; }
+  .group-info:after {
+    clear: both; }
 
 .section--info {
-  padding: 30px 30px 30px; }
+  padding: 30px; }
   @media screen and (min-width: 66em) {
     .section--info {
       float: left;
       width: 50%;
-      padding: 40px 40px 0; } }
+      padding: 40px; } }
   @media screen and (min-width: 75em) {
     .section--info {
-      padding: 76px 80px 0; } }
+      padding: 76px 80px 80px; } }
   .section--info h3 {
     color: #e7d36e;
     margin-bottom: 6px; }
@@ -940,20 +999,22 @@ ul {
   margin-bottom: 26px; }
 
 .section--map {
-  display: none; }
-  @media screen and (min-width: 43em) {
-    .section--map {
-      display: block;
-      height: 400px;
-      margin: 0 30px 30px; } }
+  background: #aaaaaa;
+  color: #ffffff;
+  padding: 20px; }
   @media screen and (min-width: 66em) {
     .section--map {
       float: right;
       width: 50%;
       position: relative;
-      height: 100%;
       padding: 0;
       margin: 0; } }
+  .section--map iframe {
+    height: 400px;
+    display: none; }
+    @media screen and (min-width: 43em) {
+      .section--map iframe {
+        display: block; } }
 
 .list--hotels {
   list-style: none;
@@ -977,8 +1038,22 @@ ul {
           margin-right: 3%; } }
   .list--hotels h4 {
     font-size: 20px;
-    line-height: 30px;
-    color: #e7d36e; }
+    line-height: 24px;
+    color: #e7d36e;
+    margin-bottom: 6px; }
+
+.section-parking {
+  padding: 10px; }
+  @media screen and (min-width: 66em) {
+    .section-parking {
+      padding: 40px;
+      border-top: 5px solid #aaffd4; } }
+  @media screen and (min-width: 75em) {
+    .section-parking {
+      padding: 80px; } }
+  .section-parking a {
+    font-weight: 900;
+    color: #ffffff; }
 
 .section--sigil {
   width: 100%;

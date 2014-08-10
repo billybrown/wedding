@@ -31,6 +31,9 @@
 	border-left: 10px solid lighten($gold, 10%);
 
 	p {
+		max-width: 1300px;
+		margin: 0 auto;
+
 		@include breakpoint($bp-teen) {
 			padding-left: 150px;
 		}
@@ -67,6 +70,7 @@
 		position: absolute;
 		width: 350%;
 		height: 100%;
+		background: skyblue;
 		background: -webkit-linear-gradient(left, $green, skyblue, $green, skyblue, $green);
 		top: 0;
 		left: 0;
@@ -75,6 +79,11 @@
   		-webkit-animation-name: rainbow;
   		-webkit-animation-iteration-count: infinite;
 		-webkit-animation-timing-function: linear;
+	}
+
+	.inside {
+		max-width: 1300px;
+		margin: 0 auto;
 	}
 }
 

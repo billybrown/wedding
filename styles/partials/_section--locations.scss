@@ -7,9 +7,11 @@
 	@extend .clearfix;
 
 	@include breakpoint($bp-medium) {
+		height: 100%;
+	}
+	@include breakpoint($bp-large) {
 		display: table;
 		vertical-align: middle;
-		height: 100%;
 	}
 }
 
@@ -25,11 +27,15 @@
 	@include breakpoint($bp-teen) {
 		padding: 60px;
 	}
-
 	@include breakpoint($bp-medium) {
 		width: 50%;
+		float: left;
+	}
+
+	@include breakpoint($bp-large) {
 		display: table-cell;
 		vertical-align: middle;
+		float: none;
 	}
 
 	.image {
@@ -67,7 +73,7 @@
 		left: 50%;
 		margin-left: -(400px * .5);
 
-		@include breakpoint($bp-large) {
+		@include breakpoint($bp-large + 3em) {
 			width: 600px;
 			height: 521px;
 			margin-left: -(600px * .5);
@@ -90,10 +96,15 @@
 		left: 50%;
 		margin-left: -(462px * .5);
 
-		@include breakpoint($bp-large) {
+		@include breakpoint($bp-medium) {
+			margin-top: 40px;
+		}
+
+		@include breakpoint($bp-large + 3em) {
 			width: 600px;
 			height: 521px;
 			margin-left: -(600px * .5);
+			margin-top: 10px;
 		}
 
 		@include breakpoint($bp-large2) {
@@ -109,7 +120,7 @@
 .text--tag {
 	text-transform: uppercase;
 	font-size: 12px;
-	line-height: 12px;
+	line-height: 16px;
 	letter-spacing: 2px;
 	color: $gold;
 	font-weight: 900;
@@ -117,6 +128,7 @@
 
 .text--title {
 	color: $gold;
+	margin-bottom: 10px;
 }
 
 .text--address,
@@ -144,6 +156,15 @@
 
 	@include breakpoint($bp-teen) {
 		width: 300px;
+	}
+}
+
+.text--time {
+	span {
+		text-transform: none;
+		letter-spacing: normal;
+		font-style: italic;
+		font-weight: 300;
 	}
 }
 
