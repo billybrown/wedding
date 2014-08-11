@@ -35,6 +35,10 @@
 			margin-left: -619px;
 		}
 	}
+
+	.no-svg & {
+		background-image: url("../img/svg/sigil-small.png");
+	}
 }
 
 .sigil--text {

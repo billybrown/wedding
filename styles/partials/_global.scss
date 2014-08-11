@@ -73,3 +73,12 @@ ul {
 		height: 100%;
 	}
 }
+
+.no-svg section {
+	max-width: 600px;
+	margin: 0 auto;
+
+	@include breakpoint($bp-teen) {
+		max-width: 100%;
+	}
+}
