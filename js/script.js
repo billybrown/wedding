@@ -21,6 +21,10 @@
 		$(this).toggleClass("is-out");
 	});
 
+
+	// smoothscrolling
+
+		$('#main-nav a').smoothScroll();
 	});
 
 
