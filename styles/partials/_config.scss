@@ -1,0 +1,70 @@
+//+++++++++++++++++++++++++++!!!+++++++++++++++++++++++++++//
+//   __   __  _______  ______    ___   _______  _______  ___      _______  _______ 
+//  |  | |  ||   _   ||    _ |  |   | |   _   ||  _    ||   |    |       ||       |
+//  |  |_|  ||  |_|  ||   | ||  |   | |  |_|  || |_|   ||   |    |    ___||  _____|
+//  |       ||       ||   |_||_ |   | |       ||       ||   |    |   |___ | |_____ 
+//  |       ||       ||    __  ||   | |       ||  _   | |   |___ |    ___||_____  |
+//   |     | |   _   ||   |  | ||   | |   _   || |_|   ||       ||   |___  _____| |
+//    |___|  |__| |__||___|  |_||___| |__| |__||_______||_______||_______||_______|
+//  
+// Here are the variables for HIAS. 
+//
+
+// this has some boilerplate colors and fonts
+@import 'config-boilers';
+
+
+//+++++++++++++++++++++++++++!!!+++++++++++++++++++++++++++//
+// Variables
+
+// brand fonts
+$karma: 'Karma';
+$droid: 'Droid Sans';
+
+// deploy fonts
+$font--body		: $droid, $helvetica;
+$font--title    : $karma, $georgia;
+
+
+// Colors
+$web-black : #333;
+$off-white : #e8e8e8;
+$white: #ffffff;
+$black: #000000;
+
+//brand colors
+$green: #aaffd4;
+$gold:  #eee19a;
+$grey: #aaaaaa;
+$red:   #ff7c5e;
+
+// deply colors
+
+$color--body: darken($grey, 15%);
+
+// breakpoints
+$bp-small	: 30em;
+$bp-teen	: 43em;
+$bp-medium	: 66em;
+$bp-large	: 75em;
+$bp-large2   : 97em;
+
+$gutter: 10px;
+
+
+//+++++++++++++++++++++++++++!!!+++++++++++++++++++++++++++//
+// Mixins
+
+// a clearfix
+@mixin clearfix {
+    zoom:1;
+    &:before, &:after {
+        content: "\0020";
+        display: block;
+        height: 0;
+        overflow: hidden;
+    }
+    &:after {
+        clear: both;
+    }
+}
