@@ -1,0 +1,66 @@
+// section sigil
+
+.section--sigil {
+	width: 100%;
+	position: relative;
+
+	@include breakpoint($bp-medium) {
+		height: 100%;
+	}
+}
+
+.sigil {
+	background: transparent url("../img/svg/sigil-small.svg") no-repeat center center;
+	width: 278px;
+	height: 263px;
+	background-size: 278px 263px;
+	transition: margin .6s ease-in-out;
+	z-index: 100;
+	margin: 30px auto;
+
+	@include breakpoint($bp-medium) {
+		background-image: url("../img/svg/sigil.svg");
+		width: 619px;
+		height: 586px;
+		background-size: 619px 586px;
+		margin-left: -(619px * .5);
+		margin-top: -(586px * .5);
+		position: absolute;
+		top: 50%;
+		left: 50%;
+	}
+}
+
+.sigil--text {
+	transition: all .6s ease-in-out;
+	max-width: 400px;
+	margin: 30px auto;
+	padding: 0 30px;
+
+	@include breakpoint($bp-medium) {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 400px;
+		height: 300px;
+		margin: -150px 0 0 -200px;
+		opacity: 0;
+		padding: 0;
+	}
+}
+
+.section--sigil.is-out {
+	.sigil {
+		@include breakpoint($bp-medium) {
+			margin-left: -619px;
+		}	
+	}
+
+	.sigil--text {
+		@include breakpoint($bp-medium) {
+			margin-left: 60px;
+			opacity: 1;
+		}		
+	}
+}
+
