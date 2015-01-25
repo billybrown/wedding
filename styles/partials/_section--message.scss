@@ -1,0 +1,150 @@
+// message section
+
+.section--message,
+.section--message2 {
+	padding: 30px;
+	font-weight: 600;
+
+	@include breakpoint($bp-teen) {
+		padding: 60px;
+	}
+
+	p {
+		font-family: $karma;
+		margin: 0;
+		position: relative;
+		padding-left: 0;
+		font-size: 25px;
+		line-height: 29px;
+
+		@include breakpoint($bp-teen) {
+			font-size: 40px;
+			line-height: 48px;
+		}
+	}
+}
+
+.section--message {
+	background: $gold;
+	color: $white;
+	border-right: 10px solid lighten($gold, 10%);
+	border-left: 10px solid lighten($gold, 10%);
+
+	p {
+		max-width: 1300px;
+		margin: 0 auto;
+
+		@include breakpoint($bp-teen) {
+			padding-left: 150px;
+		}
+
+		&:before {
+			@extend .sprite--diamond-heart;
+			content: '';
+			position: absolute;
+			top: -12px;
+			left: 0;
+			display: none;
+
+			@include breakpoint($bp-teen) {
+				display: block;
+			}
+		}
+	}
+}
+
+@-webkit-keyframes rainbow {
+    0% { transform: translate(-50%, 0);  }
+    100% { transform: translate(0, 0); }
+}
+
+.section--message2 {
+	color: $white;
+	border-left: 10px solid lighten($green, 10%);
+	border-right: 10px solid lighten(skyblue, 10%);
+	overflow: hidden;
+	position: relative;
+
+	&:after {
+		content: '';
+		position: absolute;
+		width: 350%;
+		height: 100%;
+		background: skyblue;
+		background: -webkit-linear-gradient(left, $green, skyblue, $green, skyblue, $green);
+		top: 0;
+		left: 0;
+		z-index: -1;
+  		-webkit-animation-duration: 30s;
+  		-webkit-animation-name: rainbow;
+  		-webkit-animation-iteration-count: infinite;
+		-webkit-animation-timing-function: linear;
+	}
+
+	.inside {
+		max-width: 1300px;
+		margin: 0 auto;
+	}
+}
+
+.list--contact {
+	list-style: none;
+	padding: 0;
+	margin: 10px 0 0 0;
+
+	li {
+		display: inline-block;
+		background: $white;
+		color: skyblue;
+		padding: 10px 14px;
+		border-radius: 2px;
+		margin-right: 10px;
+		margin-bottom: 10px;
+		font-weight: 100;
+	}
+}
+
+@-webkit-keyframes slide3 {
+    from { transform: translate(0px, 0px);  }
+    to { transform: translate(0px, 500px); }
+}
+
+.section--message3 {
+	padding: 30px;
+	font-weight: 600;
+	background: $red;
+	color: $white;
+	text-align: center;
+	position: relative;
+
+	@include breakpoint($bp-teen) {
+		padding: 60px;
+	}
+
+	h2 {
+		margin-bottom: 0;
+	}
+
+	.pattern {
+    	position: absolute;
+    	left: 0;
+    	right: 0;
+    	top: -500px;
+    	bottom: 0;
+		background: transparent url("../img/svg/pattern-white.svg") repeat 50% 89%;
+    	z-index: 1;
+    	opacity: .7;
+
+    	-webkit-animation-name: slide3;
+		-webkit-animation-duration: 60s;
+		-webkit-animation-timing-function: linear;
+		-webkit-animation-iteration-count: infinite;
+
+	}
+}
+
+
+
+
+
+

@@ -1,0 +1,104 @@
+// section intro
+
+@-webkit-keyframes slide {
+    from { transform: translate(0px, 0px);  }
+    to { transform: translate(0px, 500px); }
+}
+
+@-webkit-keyframes slide2 {
+    from { transform: translate(0px, 0px);  }
+    to { transform: translate(0px, 500px); }
+}
+
+.section--intro {
+	position: relative;
+	width: 100%;
+	height: 400px;
+
+	@include breakpoint($bp-teen) {
+		height: 600px;
+	}
+
+	@include breakpoint($bp-medium) {
+		float: left;
+		width: 50%;
+		height: 100%;
+	}
+
+	h1 {
+		background: transparent url("../img/single/jb-married--small.png") no-repeat center center;
+		background-size: 300px 310px;
+		display: block;
+		width: 100%;
+		position: relative;
+		min-height: 400px;
+		z-index: 2;
+		height: 400px;
+
+		@include breakpoint($bp-teen) {
+			background-size: 400px 410px;
+			height: 100%;
+			min-height: 600px;
+			background-image: url("../img/single/jb-married.png");
+		}
+
+
+		@include breakpoint($bp-large) {
+			background-size: 600px 614px;
+			left: 50px;
+		}
+	}
+}
+
+.patterns-1 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -500px;
+    bottom: 0;
+	background: transparent url("../img/svg/pattern-red.svg") repeat 0% 0%;
+    z-index: 1;
+    opacity: .7;
+    
+    -webkit-animation-name: slide;
+	-webkit-animation-duration: 60s;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-iteration-count: infinite;
+
+}
+
+.patterns-2 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -500px;
+    bottom: 0;
+	background: transparent url("../img/svg/pattern.svg") repeat 50% 50%;
+    z-index: 3;
+    opacity: .1;
+
+    -webkit-animation-name: slide2;
+	-webkit-animation-duration: 100s;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-iteration-count: infinite;
+}
+
+.directions-box {
+	position:absolute;
+	z-index: 1000;
+	bottom: 0;
+	left: 0;
+	text-transform: uppercase;
+	font-size: 12px;
+	line-height: 12px;
+	letter-spacing: 2px;
+	color: $red;
+	font-weight: 900;
+	text-align: center;
+	width: 100%;
+	display: none;
+
+	@include breakpoint($bp-medium) {
+		display: block;
+	}
+}

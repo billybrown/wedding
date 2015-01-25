@@ -1,0 +1,127 @@
+// section info
+
+.group-info { 
+	@include clearfix;
+}
+
+.section--info {
+	padding: 30px;
+
+	@include breakpoint($bp-medium) {
+		float: left;
+		width: 50%;
+		padding: 40px;
+	}
+
+	@include breakpoint($bp-large) {
+		padding: 76px 80px 80px;
+	}
+
+	h3 {
+		color: darken($gold, 10%);
+		margin-bottom: 6px;
+	}
+}
+
+.info--travel {
+	margin-bottom: 26px;
+	padding-top: 30px;
+}
+.section--map {
+	background: $grey;
+	color: $white;
+	padding: 20px;
+
+	@include breakpoint($bp-medium) {
+		float: right;
+		width: 50%;
+		position: relative;
+		padding: 0;
+		margin: 0;
+	}	
+
+	iframe {
+		height: 400px;
+		display: none;
+
+		@include breakpoint($bp-teen) {
+			display: block;
+		}
+	}
+}
+
+.list--hotels {
+	list-style: none;
+	margin: 16px 0;
+	padding: 0;
+	@extend .clearfix;
+
+	li {
+		border-bottom: 1px solid $gold;
+		padding-top: 10px;
+		@include breakpoint($bp-teen) {
+			float: left;
+			width: 48.5%;
+			padding-right: 20px;
+			text-align: left;
+			border: 1px solid $gold;
+			padding: 20px;
+		}
+
+		&:first-child {
+			border-top: 1px solid $gold;
+			@include breakpoint($bp-teen) {
+				margin-right: 3%;
+			}
+		}
+	}
+
+	h4 {
+		font-size: 20px;
+		line-height: 24px;
+		color: darken($gold, 10%);
+		margin-bottom: 6px;
+	}
+}
+
+.section-parking {
+	padding: 10px;
+	overflow: hidden;
+	padding-top: 30px;
+	position: relative;
+
+	@include breakpoint($bp-medium) {
+		padding: 40px;
+		border-top: 5px solid $green;
+	}
+	@include breakpoint($bp-large) {
+		padding:  60px 70px;	
+	}
+
+	a {
+		font-weight: 900;
+		color: $white;
+	}
+
+	.parking--inside {
+		z-index: 2;
+		position: relative;
+	}
+}
+
+.patterns-4 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -500px;
+    bottom: 0;
+	background: transparent url("../img/svg/pattern-white.svg") repeat 0% 0%;
+    z-index: 1;
+    opacity: .2;
+    
+    -webkit-animation-name: slide;
+	-webkit-animation-duration: 60s;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-iteration-count: infinite;
+
+}
