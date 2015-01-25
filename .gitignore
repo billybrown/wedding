@@ -1,4 +1,7 @@
-_site/
-.sass-cache*
-node_modules/
+npm-debug.log
+node_modules
 
+.grunt
+bower_components
+*.css.map 
+.sass-cache
